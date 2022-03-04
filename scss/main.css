@@ -677,6 +677,13 @@ footer .wrapper {
   padding-bottom: 56px;
 }
 
+@media only screen and (max-width: 1160px) {
+  footer .wrapper {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+
 footer .wrapper .list-footer {
   margin: 0 auto;
   display: -ms-grid;
