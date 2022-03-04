@@ -615,8 +615,23 @@ footer .wrapper{
 		column-gap: 109px;
 		row-gap: 118px;
 		justify-content: center;
+		@include onlylarge(1160px){
+			width: 90%;
+			grid-template-columns: 30% 15% 15% 15%;
+			column-gap: 5%;
+			@include onlylarge(968px){
+				row-gap: 20px;
+			}
+			@include onlylarge(768px){
+				display: flex;
+				flex-direction: column;				
+			}
+		}
 		.advantage{
 			width: 293px;
+			@include onlylarge(968px){
+				grid-column: 1/5;
+			}
 			h5{
 				font-size: 28px;
 				line-height: 33px;
@@ -624,6 +639,7 @@ footer .wrapper{
 				text-transform: capitalize;
 				color: #1E1E1E;
 				font-weight: bold;
+				
 			}
 			p{
 				font-family: 'Gilroy-Medium';
@@ -634,6 +650,7 @@ footer .wrapper{
 			}
 		}
 		.item{
+					
 			p{
 				font-family: 'DM Sans';
 				font-style: normal;
@@ -653,7 +670,12 @@ footer .wrapper{
 						font-family: 'Gilroy-Medium';
 						font-size: 15px;
 						line-height: 160%;
-						color: $grey1;
+						color: $grey1;						
+						@include onlylarge(768px){
+							margin-right: 15px;
+
+						}
+						
 					}
 								
 				}
@@ -661,10 +683,15 @@ footer .wrapper{
 		}
 		.net{
 			ul{
+				@include onlylarge(768px){
+					display: flex;
+									
+				}
 				li{
 					display: grid;
 					grid-template-columns: 20px 1fr;
 					column-gap: 10px;
+					align-items: center;
 					
 				}
 			}
@@ -675,6 +702,15 @@ footer .wrapper{
 		width: 1064px;
 		display: flex;
 		justify-content: space-between;
+		@include onlylarge(1200px){
+			width: 100%;
+			grid-column: 1/5;			
+		}
+		@include onlylarge(968px){
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+		
 		.year{
 			font-family: 'DM Sans';
 			font-style: normal;
@@ -685,6 +721,8 @@ footer .wrapper{
 			color: #1E2833;
 			mix-blend-mode: normal;
 			opacity: 0.5;
+			@include onlylarge(968px)
+			{margin-top: 10px;}
 		}
 		.terms{				
 			display: flex;
@@ -705,7 +743,11 @@ footer .wrapper{
 }
 
 
-
+@media screen and (max-width: 768px){
+	footer   ul{
+		display: flex;
+	}
+}
 
 @media screen and (max-width: 1400px){
 	.container-materials{
